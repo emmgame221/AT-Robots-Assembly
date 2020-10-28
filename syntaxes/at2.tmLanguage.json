@@ -60,10 +60,10 @@
 		},
 		"labels": {
 			"patterns": [{
-				"name": "variable.parameter.label.direct.at2",
+				"name": "variable.parameter.label.indirect.at2",
 				"match": "!\\w*+"
 			}, {
-				"name": "variable.parameter.label.indirect.at2",
+				"name": "variable.parameter.label.direct.at2",
 				"match": ":\\d{0,5}"
 			}]
 		},
