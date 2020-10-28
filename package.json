@@ -1,0 +1,25 @@
+{
+    "name": "atrobots-asm",
+    "displayName": "ATRobots Asm",
+    "description": "Provide syntax highlighting for the ATRobots Assembly language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "at2",
+            "aliases": ["ATRobots Assembly", "at2"],
+            "extensions": [".at2"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "at2",
+            "scopeName": "source.at2",
+            "path": "./syntaxes/at2.tmLanguage.json"
+        }]
+    }
+}
