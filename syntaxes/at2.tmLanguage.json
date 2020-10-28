@@ -74,12 +74,15 @@
 			}, {
 				"name": "constant.numeric.hex.at2",
 				"match": "\\b0x\\h+\\b"
+			}, {
+				"name": "constant.language.port.at2",
+				"match": "p_\\w+"
 			}]
 		},
 		"directives": {
 			"patterns": [{
-				"name": "meta.preprocessor.at2",
-				"match": "(?i)#[^;]+"
+				"name": "meta.preprocessor.message.at2",
+				"match": "(?i)#msg[^;]+"
 			}, {
 				"name": "meta.preprocesser.config.at2",
 				"match": "(?i)#config [^;]+=+[^;]"
