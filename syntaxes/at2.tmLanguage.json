@@ -79,7 +79,7 @@
 				"match": "(?i)p_(spedometer|heat|compass|turret_ofs|turret_abs|damage|armor|scan|accuracy|radar|random|rand|throttle|ofs_turret|trotate|abs_turret|taim|steering|weap|weapon|fire|sonar|arc|scanarc|overburn|transponder|shutdown|channel|minelayer|minetrigger|shield|shields)"
 			}, {
 				"name": "constant.language.interrupt.at2",
-				"match": "(?i)i_(destruct|reset|locate|keepshift|overburn|id|timer|angle|tid|targetid|tinfo|targetinfo|ginfo|gameinfo|rinfo|robotinfo|collisions|resetcolcnt|transmit|receive|dataready|clearcom|kills|deaths|clearmeters"
+				"match": "(?i)i_(destruct|reset|locate|keepshift|overburn|id|timer|angle|tid|targetid|tinfo|targetinfo|ginfo|gameinfo|rinfo|robotinfo|collisions|resetcolcnt|transmit|receive|dataready|clearcom|kills|deaths|clearmeters)"
 			}, {
 				"name": "constant.language.other.at2",
 				"match": "(?i)(MININT|MAXINT)"
