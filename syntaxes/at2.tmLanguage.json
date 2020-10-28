@@ -31,7 +31,7 @@
 		"mnemonics": {
 			"patterns": [{
 				"name": "keyword.control.at2",
-				"match": "\\b((?i)NOOP|ADD|SUB|INC|DEC|SHL|SHR|ROL|ROR|SAL|SAR|NEG|OR|AND|XOR|NOT|MPY|DIV|MOD|RET|CALL|JMP|CMP|JLS|JGR|JNE|JE|JGE|JLE|JZ|JNZ|JTL|XCHG|DO|LOOP|TEST|MOV|ADDR|GET|PUT|INT|IPO|IN|OPO|OUT|DEL|PUSH|POP|ERR)\\b"
+				"match": "\\b((?i)NOP|ADD|SUB|INC|DEC|SHL|SHR|ROL|ROR|SAL|SAR|NEG|OR|AND|XOR|NOT|MPY|DIV|MOD|RET|CALL|JMP|CMP|JLS|JGR|JNE|JE|JGE|JLE|JZ|JNZ|JTL|XCHG|DO|LOOP|TEST|MOV|ADDR|GET|PUT|INT|IPO|IN|OPO|OUT|DEL|PUSH|POP|ERR)\\b"
 			}]
 		},
 		"registers": {
@@ -76,7 +76,13 @@
 				"match": "\\b0x\\h+\\b"
 			}, {
 				"name": "constant.language.port.at2",
-				"match": "p_\\w+"
+				"match": "(?i)p_(spedometer|heat|compass|turret_ofs|turret_abs|damage|armor|scan|accuracy|radar|random|rand|throttle|ofs_turret|trotate|abs_turret|taim|steering|weap|weapon|fire|sonar|arc|scanarc|overburn|transponder|shutdown|channel|minelayer|minetrigger|shield|shields)"
+			}, {
+				"name": "constant.language.interrupt.at2",
+				"match": "(?i)i_(destruct|reset|locate|keepshift|overburn|id|timer|angle|tid|targetid|tinfo|targetinfo|ginfo|gameinfo|rinfo|robotinfo|collisions|resetcolcnt|transmit|receive|dataready|clearcom|kills|deaths|clearmeters"
+			}, {
+				"name": "constant.language.other.at2",
+				"match": "(?i)(MININT|MAXINT)"
 			}]
 		},
 		"directives": {
