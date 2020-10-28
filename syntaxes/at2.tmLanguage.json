@@ -3,17 +3,41 @@
 	"name": "ATRobots Assembly",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#mnemonics"
+		},
+		{
+			"include": "#registers"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#variable"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"mnemonics": {
 			"patterns": [{
 				"name": "keyword.control.at2",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b((?i)NOOP|ADD|SUB|INC|DEC|SHL|SHR|ROL|ROR|SAL|SAR|NEG|OR|AND|XOR|NOT|MPY|DIV|MOD|RET|CALL|JMP|CMP|JLS|JGR|JNE|JE|JGE|JLE|JZ|JNZ|JTL|XCHG|DO|LOOP|TEST|MOV|ADDR|GET|PUT|INT|IPO|IN|OPO|OUT|DEL|PUSH|POP|ERR)\\b"
+			}]
+		},
+		"registers": {
+			"patterns": [{
+				"name": "keyword.other.at2",
+				"match": "\\b((?i)Flags|AX|BX|CX|DX|EX|FX|SP)\\b"
 			}]
 		},
 		"strings": {
@@ -26,6 +50,56 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.at2",
+				"match": ";.*+"
+			}]
+			
+		},
+		"labels": {
+			"patterns": [{
+				"name": "variable.parameter.label.direct.at2",
+				"match": "!\\w*+"
+			}, {
+				"name": "variable.parameter.label.indirect.at2",
+				"match": ":\\d{0,5}"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.numeric.decimal.at2",
+				"match": "\\b(\\d+)\\b"
+			}, {
+				"name": "constant.numeric.hex.at2",
+				"match": "\\b0x\\h+\\b"
+			}]
+		},
+		"directives": {
+			"patterns": [{
+				"name": "meta.preprocessor.at2",
+				"match": "(?i)#[^;]+"
+			}, {
+				"name": "meta.preprocesser.config.at2",
+				"match": "(?i)#config [^;]+=+[^;]"
+			}, {
+				"name": "meta.preprocessor.define.at2",
+				"match": "(?i)#def \\b\\w+\\b",
+				"captures": {
+					"0": {
+						"patterns": [{
+							"include": "#variable"
+						}]
+					}
+				}
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.name.at2",
+				"match": "\\b\\w+\\b"
+			}]
 		}
 	},
 	"scopeName": "source.at2"
